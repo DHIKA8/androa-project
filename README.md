@@ -1,0 +1,2 @@
+# androa-project
+Androa adalah prototipe platform web sosial fashion inklusif gender yang dirancang selaras dengan misi Sustainable Development Goals (SDG) 5: Kesetaraan Gender. Proyek ini dibangun sebagai ruang komunitas digital yang aman dan interaktif, menggabungkan fitur jejaring sosial dengan eksplorasi gaya visual.
