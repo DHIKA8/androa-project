@@ -1,0 +1,303 @@
+:root {
+    /* HEADER */
+    --warna-latar: #FFFFFF;          
+    --warna-teks-gelap: #222222;     
+    --warna-primer-coklat: #7A5F48;  
+    --warna-sekunder-coklat: #E5D8C8;
+
+    /* FOOTER */
+    --warna-putih-teks: #FFFFFF;
+    --warna-latar-footer: #111111;   
+
+    /* Fonts */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-header: var(--font-sans);
+    --font-logo: "Playfair Display", "Times New Roman", serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks-gelap);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-header);
+}
+
+.navbar-left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 35px; 
+    height: 35px;
+    object-fit: cover;
+}
+
+.separator {
+    width: 2px;
+    height: 30px;
+    background: rgba(0,0,0,0.25);
+}
+
+.navbar-title {
+    font-family: var(--font-logo);
+    font-weight: 700;
+    font-size: 1.7em;
+    color: var(--warna-primer-coklat);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.navbar-right .navigation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar-right .navigation a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.95em;
+    padding-bottom: 2px;
+    transition: color 0.25s ease, border-bottom 0.25s ease;
+    border-bottom: 2px solid transparent !important;
+    font-family: var(--font-header);
+}
+
+.navbar-right .navigation a:hover {
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+}
+
+.navbar-right .navigation a.active {
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+}
+
+.navbar-right .grupauth {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-header);
+}
+
+.grupauth .admin-dropdown { order: 0; }
+.grupauth .user-name      { order: 1; }
+.grupauth .auth-btn       { order: 2; }
+
+.user-name {
+    color: var(--warna-teks-gelap) !important;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: var(--font-header);
+}
+.user-name:hover {
+    color: var(--warna-primer-coklat) !important;
+}
+
+/* DROPDOWN */
+.admin-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.admin-dropbtn {
+    background: transparent;
+    color: var(--warna-teks-gelap);
+    padding: 4px 0;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    cursor: pointer;
+    font-family: var(--font-header);
+    transition: color 0.25s ease, border-bottom 0.25s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.admin-dropbtn:hover {
+    color: var(--warna-primer-coklat);
+    border-bottom-color: var(--warna-primer-coklat);
+}
+
+/* Dropdown menu */
+.admin-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF; 
+    min-width: 170px; 
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.15); 
+    z-index: 10;
+    border-radius: 8px; 
+    overflow: hidden;
+    right: 0; 
+    margin-top: 2px; 
+    border: 1px solid #D4D4D4;
+    top: 100%; 
+}
+
+.admin-dropdown-content a {
+    color: #3A332D;
+    padding: 10px 16px; 
+    text-decoration: none;
+    display: block;
+    font-size: 0.9em;
+    font-family: var(--font-header);
+    transition: background-color 0.2s;
+}
+
+.admin-dropdown-content a:hover {
+    background-color: #F4F1EB; 
+}
+
+.admin-dropdown:hover .admin-dropdown-content {
+    display: block;
+}
+
+.auth-btn {
+    background-color: transparent; 
+    color: #000000 !important; 
+    border: 2px solid #000000;      
+    border-radius: 50px; 
+    font-size: 0.9em; 
+    padding: 6px 18px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap; 
+    text-decoration: none !important; 
+    font-family: var(--font-header);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #000000; 
+    color: #FFFFFF !important; 
+    border-color: #000000; 
+}
+
+/* footer */
+footer {
+    background-color: var(--warna-latar-footer); 
+    color: var(--warna-putih-teks); 
+    padding: 14px 5%;
+    font-size: 0.85em;
+    font-family: var(--font-header);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
+}
+
+.footer-left,
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-left a,
+.footer-right a,
+.footer-social a {
+    color: var(--warna-putih-teks);
+    text-decoration: none;
+    font-family: var(--font-header);
+    transition: color 0.2s ease;
+}
+
+.footer-left a:hover,
+.footer-right a:hover,
+.footer-social a:hover {
+    color: #CCCCCC;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 4px;
+    font-style: italic;
+    font-family: var(--font-header);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5%;
+    }
+
+    .navbar-left {
+        position: static;
+        transform: none;
+        margin-bottom: 6px;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+.navbar-right .navigation a:hover {
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+.navbar-right .navigation a.active {
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+.navbar-title {
+    color: #000000 !important;
+}
+
+.separator {
+    width: 1.3px;                 
+    height: 28px;
+    background: rgba(0,0,0,0.35); 
+    margin: 0 6px;
+    border-radius: 10px;         
+}

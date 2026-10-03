@@ -1,0 +1,2613 @@
+/* PROFILE */
+body.user-profile-page {
+    background: #F6F5F3; 
+    color: #222;
+    font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif);
+    margin: 0;
+}
+
+body.user-profile-page main {
+    max-width: 1100px;
+    margin: 40px auto 60px;
+    padding: 0 5%;
+}
+
+body.user-profile-page .profile-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E0D8;
+}
+
+body.user-profile-page .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 5% 20px;
+}
+
+body.user-profile-page .header-banner h1 {
+    margin: 0 0 6px;
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+body.user-profile-page .header-banner p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+body.user-profile-page .profile-box {
+    margin-top: 30px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 26px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #ECE7DF;
+}
+
+body.user-profile-page .profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 2px solid #E4D8C9;
+}
+
+body.user-profile-page .profile-details {
+    flex: 1;
+}
+
+body.user-profile-page .profile-details h3 {
+    margin: 0 0 4px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+body.user-profile-page .profile-details .username {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+body.user-profile-page .profile-details p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}
+
+body.user-profile-page .profile-details .meta {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+body.user-profile-page .profile-actions {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.user-profile-page .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+                transform 0.1s ease;
+}
+
+body.user-profile-page .edit-btn {
+    background: #222;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+body.user-profile-page .edit-btn:hover {
+    background: #000;
+    border-color: #000;
+    transform: translateY(-1px);
+}
+
+body.user-profile-page .secondary-btn {
+    background: transparent;
+    border: 1px solid #999;
+    color: #333;
+}
+
+body.user-profile-page .secondary-btn:hover {
+    border-color: #222;
+    color: #111;
+    transform: translateY(-1px);
+}
+
+body.user-profile-page .gallery-list {
+    margin-top: 40px;
+}
+
+body.user-profile-page .gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+body.user-profile-page .gallery-list h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+body.user-profile-page .view-all-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #444;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+body.user-profile-page .view-all-link:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+body.user-profile-page .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+body.user-profile-page .card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #E6E1DA;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+body.user-profile-page .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+body.user-profile-page .card .desc {
+    margin: 8px 10px 10px;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+body.user-profile-page .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+    border-color: #C9B9A5;
+}
+
+body.user-profile-page .empty-state {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 992px) {
+    body.user-profile-page .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+
+body.user-profile-page main {
+    padding: 0 6%;
+    margin-top: 24px;
+}
+
+body.user-profile-page .profile-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 18px;
+}
+
+body.user-profile-page .profile-avatar {
+    width: 96px;
+    height: 96px;
+}
+
+body.user-profile-page .gallery-grid {
+    grid-template-columns: 1fr;
+}
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.popup-message {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.popup-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.btn-cancel {
+    background: #ccc;
+    color: #333;
+}
+
+.btn-confirm {
+    background: #333;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background: #000;
+}
+
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: slideDown 0.3s ease-out; 
+}
+
+@keyframes slideDown { 
+    0% { transform: translateY(-50px); opacity: 0; } 
+    100% { transform: translateY(0); opacity: 1; } 
+}
+
+.modal-box h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.modal-box p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-modal {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-cancel {
+    background-color: #e0e0e0;
+    color: #333;
+}
+.btn-cancel:hover {
+    background-color: #d0d0d0;
+}
+
+.btn-delete-confirm {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-delete-confirm:hover {
+    background-color: #c82333;
+}
+
+.btn-ok {
+    background-color: #333;
+    color: white;
+}
+.btn-ok:hover {
+    background-color: #000;
+}
+
+/* GALLERY */
+body.user-gallery-page {
+    background: #f4f3f1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #222;
+    margin: 0;
+}
+
+body.user-gallery-page main {
+    max-width: 1100px;
+    margin: 40px auto 60px;
+    padding: 0 5%;
+}
+
+body.user-gallery-page .gallery-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e1dbd2;
+}
+
+body.user-gallery-page .gallery-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 26px 5% 20px;
+}
+
+body.user-gallery-page .gallery-header h1 {
+    margin: 0 0 6px;
+    font-size: 1.8rem;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+body.user-gallery-page .gallery-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+body.user-gallery-page .upload-section {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+body.user-gallery-page .upload-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #bfb7ad;
+}
+
+body.user-gallery-page .upload-section h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+body.user-gallery-page .primary-btn {
+    border-radius: 999px;
+    padding: 10px 22px;
+    border: none;
+    background: #111;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+body.user-gallery-page .primary-btn:hover {
+    background: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+body.user-gallery-page .gallery-list {
+    margin-top: 10px;
+}
+
+body.user-gallery-page .gallery-list > h2 {
+    margin: 0 0 14px;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+body.user-gallery-page .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+body.user-gallery-page .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid #d6cec4;
+    background: #f3f0eb;
+    color: #444;
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.08s ease;
+}
+
+body.user-gallery-page .filter-btn:hover {
+    background: #fff;
+    border-color: #222;
+    color: #111;
+    transform: translateY(-1px);
+}
+
+body.user-gallery-page .filter-btn.active {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+}
+
+body.user-gallery-page .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+body.user-gallery-page .card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e6e1da;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+body.user-gallery-page .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+    border-color: #c9b9a5;
+}
+
+body.user-gallery-page .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+body.user-gallery-page .post-info {
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+body.user-gallery-page .ig-caption {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+body.user-gallery-page .ig-caption b {
+    margin-right: 6px;
+}
+
+body.user-gallery-page .post-info span {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    background: #f1eee8;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #555;
+}
+
+body.user-gallery-page .actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+body.user-gallery-page .like-button,
+body.user-gallery-page .comment-button {
+    border-radius: 999px;
+    border: 1px solid #ddd3c7;
+    background: #f7f4ef;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background .18s ease, border-color .18s ease, color .18s ease, transform .08s ease;
+}
+
+body.user-gallery-page .like-button:hover,
+body.user-gallery-page .comment-button:hover {
+    background: #fff;
+    border-color: #222;
+    transform: translateY(-1px);
+}
+
+body.user-gallery-page .like-button.liked {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+}
+
+body.user-gallery-page .gallery-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+body.user-gallery-page .gallery-empty h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+body.user-gallery-page .gallery-empty p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+body.user-gallery-page .gallery-empty .primary-btn {
+    margin-top: 6px;
+}
+
+body.user-gallery-page .gallery-empty a[href="gallery.php"] {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    body.user-gallery-page .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    body.user-gallery-page main {
+        padding: 0 6%;
+    }
+
+    body.user-gallery-page .upload-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body.user-gallery-page .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* DETAIL GALLERY */
+body.user-gallery-page .gallery-detail-main {
+    max-width: 1200px;
+    margin: 40px auto 60px;
+    padding: 0 16px;
+}
+
+body.user-gallery-page .ig-detail-wrapper {
+    display: flex;
+    gap: 0;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    min-height: 520px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);   
+}
+
+body.user-gallery-page .ig-media {
+    flex: 3;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.user-gallery-page .photo-detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.user-gallery-page .ig-side {
+    flex: 2;
+    background: #ffffff;
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+}
+
+body.user-gallery-page .photo-info {
+    padding: 16px 18px 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+body.user-gallery-page .photo-title {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111111;          
+}
+
+body.user-gallery-page .photo-desc {
+    margin: 4px 0 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333333;          
+}
+
+body.user-gallery-page .photo-meta {
+    font-size: 0.78rem;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+body.user-gallery-page .photo-meta p {
+    margin: 2px 0;
+}
+
+body.user-gallery-page .photo-meta .category {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #f2f2f2;
+    color: #333333;
+    font-size: 0.75rem;
+}
+
+body.user-gallery-page .photo-likes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+body.user-gallery-page .like-btn {
+    border-radius: 999px;
+    border: 1px solid #f87171;
+    background: transparent;
+    color: #f87171;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+body.user-gallery-page .like-btn.liked {
+    background: #f87171;
+    color: #ffffff;
+}
+
+body.user-gallery-page .like-count {
+    font-size: 0.8rem;
+    color: #555555;
+}
+
+body.user-gallery-page .comment-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body.user-gallery-page .comment-form {
+    padding: 10px 18px;
+    border-top: 1px solid #e3e3e3;
+    order: 2; 
+}
+
+body.user-gallery-page .comment-form form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.user-gallery-page .comment-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 6px 0;
+    font-size: 0.85rem;
+    color: #111111;      
+    resize: none;
+    outline: none;
+}
+
+body.user-gallery-page .comment-input::placeholder {
+    color: #999999;
+}
+
+body.user-gallery-page .comment-send-btn {
+    background: transparent;
+    border: none;
+    color: #2563eb;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+body.user-gallery-page .comment-send-btn:hover {
+    color: #1d4ed8;
+}
+
+body.user-gallery-page .comment-list {
+    flex: 1;
+    padding: 12px 18px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+}
+
+body.user-gallery-page .comment-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #d0d0d0;  
+}
+
+body.user-gallery-page .comment-item:last-child {
+    border-bottom: none;
+}
+
+body.user-gallery-page .comment-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 4px;
+    color: #111111;
+    font-size: 0.85rem;
+}
+
+body.user-gallery-page .comment-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+body.user-gallery-page .comment-meta strong {
+    font-weight: 600;
+}
+
+body.user-gallery-page .comment-time {
+    color: #777777;
+    font-size: 0.75rem;
+}
+
+body.user-gallery-page .comment-content {
+    margin: 0 0 4px;
+    color: #222222;    
+    font-size: 0.9rem;
+}
+
+body.user-gallery-page .delete-link {
+    font-size: 0.8rem;
+    color: #e05656;
+    text-decoration: none;
+}
+
+body.user-gallery-page .delete-link:hover {
+    text-decoration: underline;
+}
+
+body.user-gallery-page .no-comment-text {
+    color: #777777;
+}
+
+@media (max-width: 900px) {
+    body.user-gallery-page .ig-detail-wrapper {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    body.user-gallery-page .ig-media {
+        max-height: 60vh;
+    }
+}
+
+/* UPLOAD GALLERY */
+body.user-upload-page {
+    background: #f6f5f3;
+    font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif);
+    color: #222;
+    margin: 0;
+}
+
+body.user-upload-page .upload-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e0d8;
+}
+
+body.user-upload-page .upload-header .header-banner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 26px 5% 20px;
+}
+
+body.user-upload-page .upload-header h1 {
+    margin: 0 0 6px;
+    font-size: 1.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+body.user-upload-page .upload-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+body.user-upload-page .upload-main {
+    max-width: 900px;
+    margin: 40px auto 60px;
+    padding: 0 5%;
+}
+
+body.user-upload-page .upload-form-box {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px 26px 30px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+    border: 1px solid #e6e1da;
+}
+
+body.user-upload-page .upload-form-box h2 {
+    margin: 0 0 20px;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+body.user-upload-page .error-message,
+body.user-upload-page .success-message {
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+body.user-upload-page .error-message {
+    background: #ffe8e5;
+    color: #b3261e;
+    border: 1px solid #f5b0a8;
+}
+
+body.user-upload-page .success-message {
+    background: #e8f7ec;
+    color: #1b7d3f;
+    border: 1px solid #b4e1c3;
+}
+
+/* FORM */
+body.user-upload-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+body.user-upload-page label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+body.user-upload-page input[type="file"],
+body.user-upload-page textarea,
+body.user-upload-page select {
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    border-radius: 16px;
+    border: 1px solid #d6cec4;
+    padding: 10px 12px;
+    background: #faf7f3;
+    color: #222;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+body.user-upload-page textarea {
+    min-height: 110px;
+    resize: vertical;
+    border-radius: 18px;
+}
+
+body.user-upload-page input[type="file"]:focus,
+body.user-upload-page textarea:focus,
+body.user-upload-page select:focus {
+    outline: none;
+    border-color: #111;
+    background: #fff;
+    box-shadow: 0 0 0 1px #111;
+}
+
+body.user-upload-page input[type="file"] {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+body.user-upload-page input[type="file"]::file-selector-button {
+    padding: 7px 14px;
+    margin-right: 10px;
+    border-radius: 999px;
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.08s ease;
+}
+
+body.user-upload-page input[type="file"]::file-selector-button:hover {
+    background: #000;
+    border-color: #000;
+    transform: translateY(-1px);
+}
+
+@supports (-webkit-appearance: none) {
+    body.user-upload-page input[type="file"]::-webkit-file-upload-button {
+        padding: 6px 11px;
+        margin-right: 10px;
+        border-radius: 999px;
+        border: 1px solid #111;
+        background: #2b2b2b;
+        color: #fff;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+body.user-upload-page .primary-btn {
+    margin-top: 6px;
+    width: 100%;
+    border-radius: 999px;
+    padding: 8px 10px;
+    border: none;
+    background: #111;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+body.user-upload-page .primary-btn:hover {
+    background: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 640px) {
+    body.user-upload-page .upload-main {
+        padding: 0 6%;
+        margin-top: 28px;
+    }
+
+    body.user-upload-page .upload-form-box {
+        padding: 22px 18px 24px;
+        border-radius: 20px;
+    }
+}
+
+/* EDUSTYLE ARTIKEL */
+body.user-edustyle-page {
+    background: #F7F6F4;
+    color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+}
+
+body.user-edustyle-page .gallery-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E0D8;
+}
+
+body.user-edustyle-page .gallery-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 5% 20px;
+}
+
+body.user-edustyle-page .gallery-header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 6px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+body.user-edustyle-page .gallery-header p {
+    margin: 0;
+    color: #6B6255;
+}
+
+body.user-edustyle-page .gallery-list {
+    max-width: 1100px;
+    margin: 32px auto 60px;
+    padding: 0 5%;
+}
+
+body.user-edustyle-page .gallery-list h2 {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8C8577;
+    margin: 0 0 18px;
+}
+
+body.user-edustyle-page .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+body.user-edustyle-page article.card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.user-edustyle-page article.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+}
+
+body.user-edustyle-page article.card > a img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+body.user-edustyle-page .post-info {
+    padding: 18px 20px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body.user-edustyle-page .ig-caption {
+    margin: 0 0 6px;
+    font-size: 0.9rem;
+    color: #6A6660;
+}
+
+body.user-edustyle-page .ig-caption b {
+    font-weight: 700;
+}
+
+body.user-edustyle-page .ig-caption span {
+    display: block;
+    margin-top: 3px;
+    font-size: 1.05rem;
+    color: #111111;
+}
+
+body.user-edustyle-page .article-content {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+body.user-edustyle-page .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+body.user-edustyle-page .like-button,
+body.user-edustyle-page .comment-button {
+    border-radius: 999px;
+    border: 1px solid #E5E0D8;
+    background: #FFFFFF;
+    padding: 5px 12px;
+    font-size: 0.83rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease,
+        transform 0.1s ease;
+}
+
+body.user-edustyle-page .like-button:hover,
+body.user-edustyle-page .comment-button:hover {
+    background: #F7F6F4;
+    border-color: #D0C6B5;
+    transform: translateY(-1px);
+}
+
+body.user-edustyle-page .like-button.liked {
+    background: #111111;
+    color: #FFFFFF;
+    border-color: #111111;
+}
+
+body.user-edustyle-page .stats-bar {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #F0ECE5;
+    font-size: 0.8rem;
+    color: #9B9486;
+    display: flex;
+    justify-content: space-between;
+}
+
+body.user-edustyle-page .read-more-btn {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;         
+    padding: 0;
+    background: #FFFFFF;
+    color: #111111;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-top: 1px solid #EAE4DA;
+    border-radius: 0 0 18px 18px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+body.user-edustyle-page article.card:hover .read-more-btn {
+    background: #111111;
+    color: #FFFFFF;
+}
+
+@media (max-width: 900px) {
+    body.user-edustyle-page .gallery-grid {
+        gap: 18px;
+    }
+
+    body.user-edustyle-page article.card > a img {
+        height: 230px;
+    }
+}
+
+@media (max-width: 600px) {
+    body.user-edustyle-page .gallery-list {
+        margin: 24px auto 40px;
+    }
+
+    body.user-edustyle-page .gallery-header .header-banner {
+        padding: 18px 5% 16px;
+    }
+}
+
+/* EDIT POST */
+body.user-edit-page {
+    background: #F7F6F4;
+    color: #222;
+    font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Helvetica Neue", Arial, sans-serif);
+    margin: 0;
+}
+
+body.user-edit-page .profile-header {
+    background: #ffffff;
+    border-bottom: 1px solid #E9E0D6;
+}
+
+body.user-edit-page .profile-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 4% 18px;
+}
+
+body.user-edit-page .profile-header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 500;
+}
+
+body.user-edit-page main {
+    max-width: 980px;
+    margin: 18px auto 44px;
+    padding: 0 4%;
+}
+
+body.user-edit-page .edit-container {
+    background: #FFFFFF;
+    border-radius: 22px;
+    padding: 18px 22px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    max-width: 760px;      
+    margin: 18px auto 0;
+}
+
+body.user-edit-page .form-group {
+    margin-bottom: 12px;
+}
+
+body.user-edit-page .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #222;
+    letter-spacing: 0.02em;
+    font-size: 0.93rem;
+}
+
+body.user-edit-page .form-group input[type="file"],
+body.user-edit-page .form-group select,
+body.user-edit-page .form-group textarea {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #E3D7C8;
+    background: #ffffff;
+    padding: 8px 14px;
+    font-size: 0.94rem;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body.user-edit-page .form-group textarea {
+    min-height: 110px;     
+    resize: vertical;
+}
+
+body.user-edit-page .form-group input[type="file"] {
+    cursor: pointer;
+}
+
+body.user-edit-page .form-group input[type="file"]::-webkit-file-upload-button,
+body.user-edit-page .form-group input[type="file"]::file-selector-button {
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 0.78rem;
+}
+
+body.user-edit-page .form-group input[type="file"]:focus,
+body.user-edit-page .form-group select:focus,
+body.user-edit-page .form-group textarea:focus {
+    border-color: #CBB89C;
+    box-shadow: none;
+}
+
+body.user-edit-page .edit-container img {
+    border-radius: 14px;
+    border: 1px solid #E3D7C8;
+    max-width: 200px;
+    display: block;
+}
+
+body.user-edit-page button[name="update_post"] {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 999px;
+    background: #111111;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+body.user-edit-page button[name="update_post"]:hover {
+    background: #000000;
+}
+
+body.user-edit-page .edit-container form > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid #B5A58F;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #574533 !important;
+    text-decoration: none !important;
+    background: transparent;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    margin-left: 10px;
+}
+
+body.user-edit-page .edit-container form > a:hover {
+    background: #ececec;
+    border-color: #8C7560;
+    color: #3B2B1D !important;
+}
+
+body.user-edit-page .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInEdit 0.25s ease;
+    z-index: 9999;
+}
+
+body.user-edit-page .modal-box {
+    background: #ffffff;
+    padding: 18px 20px 18px;
+    width: 280px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+    animation: slideUpEdit 0.25s ease;
+}
+
+body.user-edit-page .modal-box h3 {
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+body.user-edit-page .modal-box p {
+    margin-bottom: 12px;
+    font-size: 0.88rem;
+    color: #555;
+}
+
+body.user-edit-page .btn-confirm {
+    background: #111111;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 8px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+}
+
+body.user-edit-page .btn-confirm:hover {
+    background: #000000;
+}
+
+@keyframes fadeInEdit {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpEdit {
+    from { transform: translateY(16px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    body.user-edit-page .edit-container {
+        padding: 16px 14px 18px;
+        border-radius: 20px;
+        max-width: 100%;
+    }
+}
+
+/* MY UPLOADS */
+body.user-uploads-page {
+    background: #F7F6F4;
+    font-family: var(--font-sans, sans-serif);
+    color: #222;
+    margin: 0;
+}
+
+body.user-uploads-page .profile-header {
+    background: #fff;
+    border-bottom: 1px solid #E6DED3;
+}
+
+body.user-uploads-page .profile-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 26px 4% 18px;
+}
+
+body.user-uploads-page .profile-header h1 {
+    font-size: 1.7rem;
+    letter-spacing: 0.15em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+body.user-uploads-page .profile-header p {
+    margin: 4px 0 0;
+    color: #6f6253;
+}
+
+body.user-uploads-page main {
+    max-width: 1100px;
+    margin: 24px auto 50px;
+    padding: 0 4%;
+}
+
+body.user-uploads-page .upload-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+body.user-uploads-page .primary-btn,
+body.user-uploads-page .secondary-btn {
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+body.user-uploads-page .primary-btn {
+    background: #111;
+    color: #fff;
+}
+
+body.user-uploads-page .primary-btn:hover {
+    background: #000;
+}
+
+body.user-uploads-page .secondary-btn {
+    background: transparent;
+    color: #4c3f30;
+    border-color: #d2c4b7;
+}
+
+body.user-uploads-page .secondary-btn:hover {
+    background: #f3e9df;
+}
+
+body.user-uploads-page .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+body.user-uploads-page .gallery-grid .card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+body.user-uploads-page .gallery-grid .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+body.user-uploads-page .card-content {
+    padding: 12px 15px;
+}
+
+body.user-uploads-page .card-content .desc {
+    margin: 0 0 4px;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+body.user-uploads-page .card-content .date {
+    color: #8b7c6d;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+body.user-uploads-page .post-management {
+    display: flex;
+    gap: 8px;
+}
+
+body.user-uploads-page .post-management button,
+body.user-uploads-page .post-management .edit-btn {
+    flex: 1;
+    border-radius: 999px;
+    padding: 6px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+body.user-uploads-page .edit-btn {
+    background: #111;
+    color: #fff;
+}
+
+body.user-uploads-page .edit-btn:hover {
+    background: #000;
+}
+
+body.user-uploads-page .delete-trigger {
+    background: #fff;
+    color: #b34545;
+    border-color: #e8c8c8;
+}
+
+body.user-uploads-page .delete-trigger:hover {
+    background: #fff3f3;
+}
+
+body.user-uploads-page .no-content {
+    text-align: center;
+    padding: 50px 20px;
+    color: #6d5c49;
+    font-size: 1rem;
+}
+
+body.user-uploads-page .no-content a {
+    color: #111;
+    text-decoration: underline;
+}
+
+body.user-uploads-page .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+body.user-uploads-page .modal-overlay.active {
+    display: flex;
+}
+
+body.user-uploads-page .modal-box {
+    background: #fff;
+    padding: 20px 22px;
+    border-radius: 16px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+    animation: fadeUp 0.25s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+body.user-uploads-page .modal-actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+body.user-uploads-page .btn-modal {
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body.user-uploads-page .btn-cancel {
+    background: #e8e8e8;
+    border: 1px solid #d3d3d3;
+}
+
+body.user-uploads-page .btn-delete-confirm {
+    background: #d32424;
+    color: #fff;
+    border: 1px solid #c60808;
+}
+
+body.user-uploads-page .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+body.user-uploads-page .gallery-grid .card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #EFE6DB;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.02);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body.user-uploads-page .gallery-grid .card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #F0E6DA;
+}
+
+body.user-uploads-page .gallery-grid .card-content {
+    padding: 12px 16px 14px !important;
+}
+
+body.user-uploads-page .gallery-grid .card-content .desc {
+    margin: 0 0 4px !important;
+    font-size: 0.95rem;
+    font-weight: 500 !important;
+}
+
+body.user-uploads-page .gallery-grid .card-content .date {
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    color: #8B7A68;
+}
+
+body.user-uploads-page .post-management {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+body.user-uploads-page .post-management .edit-btn,
+body.user-uploads-page .post-management .delete-trigger {
+    flex: 0;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+}
+
+body.user-uploads-page .post-management .edit-btn {
+    border-color: #CBB9A4;
+    color: #3F3224;
+}
+
+body.user-uploads-page .post-management .edit-btn:hover {
+    background: #F4EBE0;
+}
+
+body.user-uploads-page .post-management .delete-trigger {
+    border-color: transparent;
+    color: #B54747;
+}
+
+body.user-uploads-page .post-management .delete-trigger:hover {
+    background: #FFF2F2;
+}
+
+/* HOME */
+/* HOME: USER */
+
+body.home-body-user {
+    background: #F7F6F4;
+}
+
+body.home-body-user .landing-header {
+    background: #ffffff;
+    border-bottom: 1px solid #E5E0D8;
+    padding-bottom: 20px;
+}
+
+body.home-body-user .landing-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 5% 20px;
+}
+
+body.home-body-user .landing-header .header-banner h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: #222;
+}
+
+body.home-body-user .landing-header .header-banner p {
+    margin: 0;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+}
+
+body.home-body-user main {
+    max-width: 1100px;
+    margin: 36px auto 60px;
+    padding: 0 5%;
+}
+
+body.home-body-user .section-title {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #222;
+    border-bottom: 2px solid #E5E0D8;
+    padding-bottom: 8px;
+}
+
+body.home-body-user .infografis-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+body.home-body-user .infografis-box {
+    flex: 1;
+    min-width: 280px;
+    background: #FFF;
+    border-radius: 18px;
+    padding: 24px 26px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ECE7DF;
+    transition: transform 0.2s ease;
+}
+
+body.home-body-user .infografis-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.home-body-user .infografis-box h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+}
+
+body.home-body-user .infografis-box p {
+    margin: 0 0 15px;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: justify;
+}
+
+body.home-body-user .artikel-card,
+body.home-body-user .gallery-item {
+    background: #FFFFFF;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #E6E1DA;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+body.home-body-user .artikel-card:hover,
+body.home-body-user .gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+    border-color: #C9B9A5;
+}
+
+body.home-body-user .highlight-container {
+    margin-bottom: 40px;
+}
+
+body.home-body-user .highlight-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+body.home-body-user .artikel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px 14px 0 0;
+}
+
+body.home-body-user .artikel-info {
+    padding-bottom: 15px;
+}
+
+body.home-body-user .artikel-card h4 {
+    margin: 12px 15px 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+body.home-body-user .artikel-card p {
+    margin: 0 15px 15px;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+body.home-body-user .artikel-footer {
+    padding: 0 15px;
+    margin-top: auto;
+}
+
+body.home-body-user .artikel-card .read-more {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+    border-bottom: 2px solid #E2D5C6;
+    padding-bottom: 2px;
+    transition: border-bottom-color 0.2s ease, color 0.2s ease;
+}
+
+body.home-body-user .artikel-card .read-more:hover {
+    border-bottom-color: #C9B9A5;
+    color: #000;
+}
+
+body.home-body-user .date-tag {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    color: #999;
+}
+
+body.home-body-user .gallery-preview {
+    margin-bottom: 40px;
+}
+
+body.home-body-user .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.home-body-user .gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px 14px 0 0;
+}
+
+body.home-body-user .gallery-info {
+    padding: 10px 15px 15px;
+}
+
+body.home-body-user .gallery-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #222;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+body.home-body-user .gallery-info b {
+    font-weight: 600;
+}
+
+body.home-body-user .style-tag {
+    display: inline-block;
+    background: #e0e0e0;
+    color: #444;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+body.home-body-user .more-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    text-decoration: none;
+    background: #222;
+    color: #fff;
+    border: 1px solid #222;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+body.home-body-user .more-btn:hover {
+    background: #000;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+    body.home-body-user .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    body.home-body-user .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.home-body-user .full-text {
+    display: none;
+    margin-top: 15px;
+    animation: fadeInText 0.5s ease;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.home-body-user .toggle-btn {
+    background: transparent;
+    border: none;
+    color: #222;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 0;
+    border-bottom: 2px solid #E2D5C6;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+body.home-body-user .toggle-btn:hover {
+    color: #000;
+    border-bottom-color: #000;
+    transform: translateY(-2px);
+}
+
+body.home-body-user .full-text p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* EDIT PROFILE */
+body.edit-profile-user-body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F6F4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+}
+
+body.edit-profile-user-body .profile-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+}
+
+body.edit-profile-user-body .profile-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px 40px;
+}
+
+body.edit-profile-user-body .profile-header .header-banner h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    margin: 0 0 10px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+body.edit-profile-user-body .profile-header .header-banner p {
+    font-size: 1rem;
+    color: #6f6f6f;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+body.edit-profile-user-body .edit-profile-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 16px 50px;
+    box-sizing: border-box;
+}
+
+body.edit-profile-user-body .edit-profile-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 32px 28px 30px;
+    box-sizing: border-box;
+}
+
+body.edit-profile-user-body .edit-profile-box h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+/* AVATAR */
+body.edit-profile-user-body .profile-avatar-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+body.edit-profile-user-body .profile-avatar-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.edit-profile-user-body .profile-avatar-upload label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0;
+}
+
+body.edit-profile-user-body #profile-photo {
+    display: none;
+}
+
+body.edit-profile-user-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+body.edit-profile-user-body .input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+body.edit-profile-user-body .input-group input,
+body.edit-profile-user-body .input-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #eaeaea;
+    border-radius: 30px;
+    background-color: #f9f7f4;
+    outline: none;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+body.edit-profile-user-body .input-group textarea {
+    border-radius: 20px;
+    min-height: 100px;
+    resize: none;
+}
+
+body.edit-profile-user-body .input-group label {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease all;
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+body.edit-profile-user-body .input-group textarea + label {
+    top: 24px;
+}
+
+body.edit-profile-user-body .input-group input:focus + label,
+body.edit-profile-user-body .input-group input:not(:placeholder-shown) + label,
+body.edit-profile-user-body .input-group textarea:focus + label,
+body.edit-profile-user-body .input-group textarea:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #555;
+    background-color: #f9f7f4;
+    z-index: 1;
+}
+
+body.edit-profile-user-body .input-group input:focus,
+body.edit-profile-user-body .input-group textarea:focus {
+    border-color: #ccc;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+body.edit-profile-user-body .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+body.edit-profile-user-body button.primary-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.edit-profile-user-body button.primary-btn:hover {
+    background-color: #000;
+}
+
+body.edit-profile-user-body button.secondary-btn {
+    background-color: transparent;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 10px 26px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.edit-profile-user-body button.secondary-btn:hover {
+    background-color: #f0f0f0;
+}
+
+body.edit-profile-user-body .error-message {
+    background-color: #ffe6e6;
+    color: #d63031;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+body.edit-profile-user-body .success-message {
+    background-color: #e6fffa;
+    color: #00b894;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ABOUT ANDROA */
+:root {
+    --bg-color: #F4F4F4;
+    --card-bg: #FFFFFF;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --radius-card: 20px;
+    --font-main: 'Arial', sans-serif;
+}
+
+body.about-androa-user {
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+body.about-androa-user .about-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #E6DED3;
+}
+
+body.about-androa-user .about-header .header-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 4% 24px;
+}
+
+body.about-androa-user .about-header .header-banner h1 {
+    font-size: 1.7rem;
+    font-weight: 550;
+    letter-spacing: 0.13em;
+    margin: 0 0 8px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+body.about-androa-user .about-header .header-banner p {
+    color: #6f6253;
+    margin: 0;
+    line-height: 1.45;
+    text-align: left;
+}
+
+body.about-androa-user .about-main {
+    display: flex;
+    justify-content: center;
+    padding: 30px 16px 60px;
+    box-sizing: border-box;
+}
+
+body.about-androa-user .visi-misi {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 32px;
+    border-radius: var(--radius-card);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+body.about-androa-user .visi-misi h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+body.about-androa-user .visi-misi p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+body.about-androa-user .visi-misi .misi-list,
+body.about-androa-user .visi-misi .sdg-list {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+body.about-androa-user .visi-misi .misi-list li,
+body.about-androa-user .visi-misi .sdg-list li {
+    margin-bottom: 8px;
+}
+
+body.about-androa-user .visi-misi .misi-list li strong {
+    color: var(--text-primary);
+}
+
+/* DETAIL ARTIKEL */
+body.detail-artikel-user .gallery-detail-main {
+    max-width: 680px;
+    margin: 30px auto 80px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+body.detail-artikel-user .article-image-container {
+    background: #FFFFFF;
+    border-radius: 22px 22px 0 0;
+    overflow: hidden;
+    border: 1px solid #E5E0D8;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+}
+
+body.detail-artikel-user .article-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+body.detail-artikel-user .article-info {
+    background: #FFFFFF;
+    border-radius: 0 0 22px 22px;
+    padding: 30px 35px;
+    border: 1px solid #E5E0D8;
+    border-top: none;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+body.detail-artikel-user .article-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+body.detail-artikel-user .article-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+}
+
+body.detail-artikel-user .article-date {
+    font-size: 0.85rem;
+    color: #888;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+body.detail-artikel-user .like-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+body.detail-artikel-user .like-btn {
+    background: transparent;
+    border: 1px solid #111;
+    padding: 8px 24px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body.detail-artikel-user .like-btn:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+body.detail-artikel-user .like-btn.liked {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+}
+
+body.detail-artikel-user .like-count {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+body.detail-artikel-user .comment-section {
+    background: #FFFFFF;
+    border-radius: 22px;
+    padding: 30px 35px;
+    border: 1px solid #E5E0D8;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.03);
+}
+
+body.detail-artikel-user .comment-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+body.detail-artikel-user .comment-section form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+body.detail-artikel-user .comment-section textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 20px;
+    background: #f9f6f2; 
+    border: 1px solid #d9d0c6;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #222;
+    resize: none;
+    outline: none;
+    transition: all 0.2s ease;
+    min-height: 100px;
+    box-sizing: border-box;
+}
+
+body.detail-artikel-user .comment-section textarea:focus {
+    background: #FFFFFF;
+    border-color: #111;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.detail-artikel-user .comment-section textarea::placeholder {
+    color: #a69c90;
+}
+
+body.detail-artikel-user .comment-section .primary-btn {
+    align-self: flex-end;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: #111;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+body.detail-artikel-user .comment-section .primary-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+body.detail-artikel-user .comment-list {
+    margin-top: 20px;
+}
+
+body.detail-artikel-user .comment-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+body.detail-artikel-user .comment-item:last-child {
+    border-bottom: none;
+}
+
+body.detail-artikel-user .comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+body.detail-artikel-user .comment-header strong {
+    color: #111;
+}
+
+body.detail-artikel-user .comment-header span {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+body.detail-artikel-user .comment-item p {
+    margin: 0 0 8px;
+    color: #444;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+body.detail-artikel-user .delete-link {
+    font-size: 0.8rem;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+body.detail-artikel-user .delete-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+body.detail-artikel-user .comment-item hr {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body.detail-artikel-user .gallery-detail-main {
+        padding: 0 4%;
+        margin-top: 20px;
+    }
+    
+    body.detail-artikel-user .article-info,
+    body.detail-artikel-user .comment-section {
+        padding: 25px 20px;
+    }
+}
